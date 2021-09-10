@@ -60,6 +60,7 @@ public:
      * by reloading all items again.
      */
     void refreshDirectory(const QUrl& url);
+    void updateDirectory(const QUrl& url);
 
     /**
      * @return Parent directory of the items that are shown. In case

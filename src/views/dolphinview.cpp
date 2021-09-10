@@ -1614,6 +1614,8 @@ void DolphinView::updateViewState()
                 m_currentItemUrl = QUrl();
             } else {
                 selectionManager->setCurrentItem(0);
+                // FIXME: this shouldn't be needed as KFileItemModel tracks the dir already
+                m_model->updateDirectory(m_currentItemUrl.adjusted(QUrl::RemoveFilename));
             }
         } else {
             m_currentItemUrl = QUrl();
